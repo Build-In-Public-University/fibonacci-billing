@@ -1,0 +1,56 @@
+{
+  "name": "fibonacci-billing",
+  "version": "0.0.1",
+  "description": "This is a package that implements fibonacci billing as an alternative to monthly and annual subscriptions.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Build-In-Public-University/fibonacci-billing.git"
+  },
+  "author": "Leo Guinan <leo@ideanexusventures.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Build-In-Public-University/fibonacci-billing/issues"
+  },
+  "homepage": "https://github.com/Build-In-Public-University/fibonacci-billing#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.11.19",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.2",
+    "ts-jest": "^29.2.6",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "@paddle/paddle-node-sdk": "^2.5.0",
+    "stripe": "^17.7.0"
+  }
+}
